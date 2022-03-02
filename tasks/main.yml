@@ -38,8 +38,8 @@
 
 - name: edit aliases files
   lineinfile:
-    dest: /etc/aliases
-    regexp: "^root:\s+{{ root_mail_forward }}"
+    path: /etc/aliases
+    regexp: "^root:"
     line: "root: {{ root_mail_forward }}"
   notify: 
     - postalias
