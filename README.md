@@ -1,4 +1,4 @@
-# ansirole_pi_default
+# ansible_pi_default
 
 ## Role installation
 
@@ -16,10 +16,10 @@ touch requirements/pi_default.yml
 ---
 
 # ansible-galaxy install -p vss_galaxy_roles --force -r requirements/pi_default.yml
-- src: "https://github.com/virsas/ansirole_pi_default"
+- src: "https://github.com/virsas/ansible_pi_default"
   scm: git
   version: v1.0
-  name: ansirole_pi_default
+  name: ansible_pi_default
   path: vss_galaxy_roles
 ```
 
@@ -42,8 +42,8 @@ If you are using git for your playbooks and sites configuration, add vss_galaxy_
 ``` bash
 $ cd vss_galaxy_roles
 $ ls
-ansirole_pi_default
-$ cd ansirole_pi_default
+ansible_pi_default
+$ cd ansible_pi_default
 $ ls -1
 defaults
 handlers
@@ -79,7 +79,7 @@ host_key_checking=False
   remote_user: pi
   become: yes
   roles:
-    - ansirole_pi_default
+    - ansible_pi_default
 ```
 
 ### Inventory (./sites/NAME/inventory)
